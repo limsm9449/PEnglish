@@ -45,7 +45,6 @@
                 android:layout_x="130dp"
                 android:layout_y="357dp"
                 android:id="@+id/my_c_webview_rl"
-                android:layout_above="@+id/adView"
                 android:background="@color/colorPrimary"
                 android:clickable="false"
                 android:layout_height="wrap_content">
