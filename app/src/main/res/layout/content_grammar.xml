@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_grammar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.sleepingbear.penglish.GrammarActivity"
+    tools:showIn="@layout/activity_grammar">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/adView">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:checkedButton="@+id/my_rb_grammar"
+                android:id="@+id/my_rg"
+                android:orientation="horizontal"
+                android:background="@drawable/my_toggle_outline"
+                android:layout_margin="5dp"
+                android:layout_alignParentRight="true">
+
+                <RadioButton
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:text="문법 학습"
+                    android:id="@+id/my_rb_grammar"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="@drawable/my_toggle_bg"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="1dp"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:textColor="@color/my_white"
+                    android:checked="true"
+                    android:layout_marginRight="1dp" />
+
+                <RadioButton
+                    android:layout_height="match_parent"
+                    android:text="문법 문제 풀기"
+                    android:id="@+id/my_rb_grammar_study"
+                    android:background="@drawable/my_toggle_bg"
+                    android:layout_weight="1.5"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:textColor="@color/my_white"
+                    android:layout_width="100dp" />
+            </RadioGroup>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/my_divider"
+            android:layout_marginTop="5dp"></LinearLayout>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/my_lv" />
+
+    </LinearLayout>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

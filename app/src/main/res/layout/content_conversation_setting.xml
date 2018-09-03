@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_conversation_setting"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.sleepingbear.penglish.ConversationSettingActivity"
+    tools:showIn="@layout/activity_conversation_setting">
+
+    <TextView
+        android:text="몇몇 핸드폰의 경우 클릭할 단어의 Line Height와 Font Weight가 정상적으로 반영되지 않는 문제점이 있어서 설정 할 수 있는 화면을 제공하게 되었습니다. 기본 Line Height는 120, Font Weight는 36 입니다."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/my_tv_info"
+        android:layout_margin="10dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/my_tv_info"
+        android:id="@+id/my_ll_1"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:text="Line Height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView4"
+            android:layout_weight="1" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/my_et_line_height"
+            android:layout_weight="1"
+            android:text="120" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/my_ll_1"
+        android:id="@+id/my_ll_2"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:text="Font Weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView6"
+            android:layout_weight="1" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/my_et_font_weight"
+            android:layout_weight="1"
+            android:text="36" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/adView"
+        android:layout_margin="10dp">
+
+        <Button
+            android:text="초기화"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/my_b_default"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>
