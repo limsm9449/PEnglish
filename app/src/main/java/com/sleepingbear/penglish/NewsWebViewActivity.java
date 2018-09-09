@@ -435,7 +435,7 @@ public class NewsWebViewActivity extends AppCompatActivity implements View.OnCli
             script.append("    var e = 0;");
             script.append("    for ( var i = selection.focusOffset - 1; i >= 0; i-- ) {");
             script.append("        if ( fullStr.substring(i, i+1) == \" \" ) {");
-            script.append("            s = i;");
+            script.append("            s = i + 1;");
             script.append("            break;");
             script.append("        }");
             script.append("    }");
