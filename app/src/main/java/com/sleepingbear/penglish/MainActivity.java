@@ -347,7 +347,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Intent msg = new Intent(Intent.ACTION_SEND);
             msg.addCategory(Intent.CATEGORY_DEFAULT);
             msg.putExtra(Intent.EXTRA_SUBJECT, R.string.app_name);
-            msg.putExtra(Intent.EXTRA_TEXT, "영어.. 참 어렵죠? '최고의 영어학습' 어플을 사용해 보세요. https://play.google.com/store/apps/details?id=com.sleepingbear.english");
+            msg.putExtra(Intent.EXTRA_TEXT, "영어.. 참 어렵죠? '최고의 영어학습' 어플을 사용해 보세요. https://play.google.com/store/apps/details?id=com.sleepingbear.penglish");
             msg.setType("text/plain");
             startActivity(Intent.createChooser(msg, "어플 공유"));
         } else if (id == R.id.nav_review) {
