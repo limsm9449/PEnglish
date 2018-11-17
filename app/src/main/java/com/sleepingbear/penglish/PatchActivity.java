@@ -30,9 +30,10 @@ public class PatchActivity extends AppCompatActivity {
         StringBuffer patch = new StringBuffer();
 
         patch.append("* 패치 내역" + CommConstants.sqlCR);
+        patch.append("- 단어장에서 엑셀파일로 등록시 오류 수정" + CommConstants.sqlCR);
+        patch.append(CommConstants.sqlCR);
+        patch.append(CommConstants.sqlCR);
         patch.append("- 2018.9.13 : (유료) 최고의 영어학습 어플 오픈" + CommConstants.sqlCR);
-        patch.append(CommConstants.sqlCR);
-        patch.append(CommConstants.sqlCR);
 
         ((TextView) this.findViewById(R.id.my_c_patch_tv1)).setText(patch.toString());
 
